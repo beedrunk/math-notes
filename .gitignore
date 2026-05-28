@@ -1,0 +1,6 @@
+.sync/
+Thumbs.db
+.DS_Store
+desktop.ini
+node_modules/
+
