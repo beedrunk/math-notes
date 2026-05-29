@@ -64,12 +64,9 @@ $$
 
 $$
 \mathbf{u}+\mathbf{v}
-=
-\begin{pmatrix}1\\2\end{pmatrix}
-+
-\begin{pmatrix}3\\1\end{pmatrix}
-=
-\begin{pmatrix}4\\3\end{pmatrix}
+=\begin{pmatrix}1\\2\end{pmatrix}
++\begin{pmatrix}3\\1\end{pmatrix}
+=\begin{pmatrix}4\\3\end{pmatrix}
 $$
 
 几何上就是：先沿 $\mathbf{u}$ 走，再沿 $\mathbf{v}$ 走，起点到终点的箭头就是 $\mathbf{u}+\mathbf{v}$。
@@ -227,12 +224,10 @@ $$
 
 $$
 A\mathbf{i}
-=
-\begin{pmatrix}a\\c\end{pmatrix},
+=\begin{pmatrix}a\\c\end{pmatrix},
 \qquad
 A\mathbf{j}
-=
-\begin{pmatrix}b\\d\end{pmatrix}
+=\begin{pmatrix}b\\d\end{pmatrix}
 $$
 
 也就是说：
@@ -273,8 +268,7 @@ $$
 A\begin{pmatrix}x\\y\end{pmatrix}
 =x\begin{pmatrix}a\\c\end{pmatrix}
 +y\begin{pmatrix}b\\d\end{pmatrix}
-=
-\begin{pmatrix}ax+by\\cx+dy\end{pmatrix}
+=\begin{pmatrix}ax+by\\cx+dy\end{pmatrix}
 $$
 
 这说明矩阵乘向量不是机械代数，而是在问：
@@ -659,8 +653,7 @@ $$
 
 $$
 A-\lambda I
-=
-\begin{pmatrix}
+=\begin{pmatrix}
 1-\lambda & 1\\
 -2 & 4-\lambda
 \end{pmatrix}
@@ -1058,8 +1051,7 @@ $$
 
 $$
 \|\mathbf{u}\times\mathbf{v}\|
-=
-\|\mathbf{u}\|\|\mathbf{v}\|\sin\theta
+=\|\mathbf{u}\|\|\mathbf{v}\|\sin\theta
 $$
 
 叉积可以理解为：
