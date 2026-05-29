@@ -1,5 +1,6 @@
 param(
-    [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+    [string]$RepoRoot = (Resolve-Path (Join-Path $PSScriptRoot '..')).Path,
+    [switch]$VisibleWorker
 )
 
 $ErrorActionPreference = 'Stop'
@@ -20,25 +21,6 @@ function Write-Log {
     Add-Content -LiteralPath $logFile -Value $line -Encoding UTF8
 }
 
-function Show-UpdateNotification {
-    param(
-        [string]$Commit,
-        [string]$Message = 'Math notes synced to GitHub.'
-    )
-
-    try {
-        $shell = New-Object -ComObject WScript.Shell
-        $body = if ([string]::IsNullOrWhiteSpace($Commit)) {
-            $Message
-        } else {
-            '{0}{1}Commit: {2}' -f $Message, [Environment]::NewLine, $Commit
-        }
-        $null = $shell.Popup($body, 8, 'Yank Note Math Notes', 64)
-    } catch {
-        Write-Log ("notification failed: {0}" -f $_.Exception.Message)
-    }
-}
-
 try {
     Write-Log 'sync started'
 
@@ -50,6 +32,20 @@ try {
         exit 0
     }
 
+    if (-not $VisibleWorker) {
+        Write-Log 'changes detected; launching visible sync worker'
+        $scriptPath = Join-Path $PSScriptRoot 'sync-math-notes.ps1'
+        $arguments = @(
+            '-NoProfile',
+            '-ExecutionPolicy', 'Bypass',
+            '-File', ('"{0}"' -f $scriptPath),
+            '-RepoRoot', ('"{0}"' -f $repoRootFull),
+            '-VisibleWorker'
+        ) -join ' '
+        Start-Process -FilePath 'powershell.exe' -ArgumentList $arguments -WorkingDirectory $repoRootFull
+        exit 0
+    }
+
     git @GitNetworkArgs -C $repoRootFull add -A
     $timestamp = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'
     git @GitNetworkArgs -C $repoRootFull commit -m "chore: auto-sync math notes $timestamp"
@@ -57,8 +53,9 @@ try {
     git @GitNetworkArgs -C $repoRootFull push origin main
     $commit = git -C $repoRootFull rev-parse --short HEAD
 
-    Write-Log 'sync completed'
-    Show-UpdateNotification -Commit $commit
+    Write-Host ("Math notes synced to GitHub. Commit: {0}" -f $commit)
+    Write-Log ("sync completed: {0}" -f $commit)
+    Start-Sleep -Seconds 3
 } catch {
     Write-Log ("sync failed: {0}" -f $_.Exception.Message)
     throw
