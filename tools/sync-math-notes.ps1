@@ -3,6 +3,11 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+$Utf8NoBom = New-Object System.Text.UTF8Encoding $false
+[Console]::InputEncoding = $Utf8NoBom
+[Console]::OutputEncoding = $Utf8NoBom
+$OutputEncoding = $Utf8NoBom
+$GitNetworkArgs = @('-c', 'http.sslBackend=schannel', '-c', 'http.version=HTTP/1.1')
 
 $repoRootFull = [System.IO.Path]::GetFullPath($RepoRoot).TrimEnd('\')
 $logDir = Join-Path $repoRootFull '.sync'
@@ -26,15 +31,14 @@ try {
         exit 0
     }
 
-    git -C $repoRootFull add -A
+    git @GitNetworkArgs -C $repoRootFull add -A
     $timestamp = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'
-    git -C $repoRootFull commit -m "chore: auto-sync math notes $timestamp"
-    git -C $repoRootFull pull --rebase origin main
-    git -C $repoRootFull push origin main
+    git @GitNetworkArgs -C $repoRootFull commit -m "chore: auto-sync math notes $timestamp"
+    git @GitNetworkArgs -C $repoRootFull pull --rebase origin main
+    git @GitNetworkArgs -C $repoRootFull push origin main
 
     Write-Log 'sync completed'
 } catch {
     Write-Log ("sync failed: {0}" -f $_.Exception.Message)
     throw
 }
-

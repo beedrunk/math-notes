@@ -5,6 +5,10 @@ param(
 )
 
 $ErrorActionPreference = 'Stop'
+$Utf8NoBom = New-Object System.Text.UTF8Encoding $false
+[Console]::InputEncoding = $Utf8NoBom
+[Console]::OutputEncoding = $Utf8NoBom
+$OutputEncoding = $Utf8NoBom
 
 function ConvertTo-RawUrl {
     param([string]$RelativePath)
@@ -116,4 +120,3 @@ Get-ChildItem -LiteralPath $repoRootFull -Recurse -File -Filter '*.md' |
             Set-Content -LiteralPath $mdFile.FullName -Value $updated -Encoding UTF8
         }
     }
-
