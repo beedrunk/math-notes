@@ -20,3 +20,4 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File D:\math-notes\tools\sync
 
 脚本会在有修改时自动规范化图片链接、提交并推送到 GitHub。
 
+    
