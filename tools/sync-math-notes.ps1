@@ -32,19 +32,7 @@ try {
         exit 0
     }
 
-    if (-not $VisibleWorker) {
-        Write-Log 'changes detected; launching visible sync worker'
-        $scriptPath = Join-Path $PSScriptRoot 'sync-math-notes.ps1'
-        $arguments = @(
-            '-NoProfile',
-            '-ExecutionPolicy', 'Bypass',
-            '-File', ('"{0}"' -f $scriptPath),
-            '-RepoRoot', ('"{0}"' -f $repoRootFull),
-            '-VisibleWorker'
-        ) -join ' '
-        Start-Process -FilePath 'powershell.exe' -ArgumentList $arguments -WorkingDirectory $repoRootFull
-        exit 0
-    }
+    Write-Log 'changes detected; syncing in background'
 
     git @GitNetworkArgs -C $repoRootFull add -A
     $timestamp = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'
@@ -53,9 +41,7 @@ try {
     git @GitNetworkArgs -C $repoRootFull push origin main
     $commit = git -C $repoRootFull rev-parse --short HEAD
 
-    Write-Host ("Math notes synced to GitHub. Commit: {0}" -f $commit)
     Write-Log ("sync completed: {0}" -f $commit)
-    Start-Sleep -Seconds 3
 } catch {
     Write-Log ("sync failed: {0}" -f $_.Exception.Message)
     throw
