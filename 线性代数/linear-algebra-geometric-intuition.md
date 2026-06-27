@@ -444,7 +444,7 @@ $$
 $$
 \det(A)=0
 \quad\Longleftrightarrow\quad
-\mathrm{rank}(A)<n
+\mathrm{rank}(A)\lt n
 $$
 
 几何上就是：行列式为 0，说明体积被压成 0；体积变 0 的原因，是至少有一个独立方向丢失了。
