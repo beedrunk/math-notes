@@ -500,7 +500,7 @@ $$
 对一个方阵 A，伴随矩阵通常记作：
 
 $$
-\operatorname{adj}(A)
+\mathrm{adj}(A)
 $$
 
 这里的“伴随矩阵”指中文线性代数教材中常见的伴随矩阵，也就是英文里的 adjugate matrix 或 classical adjoint，不是复内积空间里的 Hermitian adjoint。
@@ -508,13 +508,13 @@ $$
 它满足一个非常重要的公式：
 
 $$
-A\operatorname{adj}(A)=\operatorname{adj}(A)A=\det(A)I
+A\mathrm{adj}(A)=\mathrm{adj}(A)A=\det(A)I
 $$
 
 如果 A 可逆，也就是 $\det(A)\ne 0$，那么：
 
 $$
-A^{-1}=\frac{1}{\det(A)}\operatorname{adj}(A)
+A^{-1}=\frac{1}{\det(A)}\mathrm{adj}(A)
 $$
 
 这也是很多教材里引入伴随矩阵的方式。
@@ -528,7 +528,7 @@ $$
 因为当 A 可逆时：
 
 $$
-\operatorname{adj}(A)=\det(A)A^{-1}
+\mathrm{adj}(A)=\det(A)A^{-1}
 $$
 
 所以它可以被拆成两层意思：
@@ -555,7 +555,7 @@ $$
 那么：
 
 $$
-\operatorname{adj}(A)=
+\mathrm{adj}(A)=
 \begin{pmatrix}
 d & -b\\
 -c & a
@@ -565,7 +565,7 @@ $$
 并且：
 
 $$
-A\operatorname{adj}(A)=
+A\mathrm{adj}(A)=
 \begin{pmatrix}
 ad-bc & 0\\
 0 & ad-bc
@@ -573,13 +573,13 @@ ad-bc & 0\\
 =\det(A)I
 $$
 
-几何上，A 先把平面网格变形；$\operatorname{adj}(A)$ 再把这个变形“拉回正方形方向”，但拉回来的不是单位正方形，而是面积被乘了 $\det(A)$ 的正方形。
+几何上，A 先把平面网格变形；$\mathrm{adj}(A)$ 再把这个变形“拉回正方形方向”，但拉回来的不是单位正方形，而是面积被乘了 $\det(A)$ 的正方形。
 
 也就是说：
 
 $$
 A
-\xrightarrow{\operatorname{adj}(A)}
+\xrightarrow{\mathrm{adj}(A)}
 \det(A)I
 $$
 
@@ -594,19 +594,19 @@ $$
 如果：
 
 $$
-A\operatorname{adj}(A)=\det(A)I
+A\mathrm{adj}(A)=\det(A)I
 $$
 
 并且 $\det(A)\ne 0$，那么两边除以 $\det(A)$：
 
 $$
-A\left(\frac{1}{\det(A)}\operatorname{adj}(A)\right)=I
+A\left(\frac{1}{\det(A)}\mathrm{adj}(A)\right)=I
 $$
 
 所以：
 
 $$
-A^{-1}=\frac{1}{\det(A)}\operatorname{adj}(A)
+A^{-1}=\frac{1}{\det(A)}\mathrm{adj}(A)
 $$
 
 几何过程是：
@@ -673,7 +673,7 @@ $$
 把它们排在一起，可以得到：
 
 $$
-\operatorname{adj}(A)^T
+\mathrm{adj}(A)^T
 =
 \begin{pmatrix}
 | & | & |\\
@@ -715,7 +715,7 @@ $$
 那么 A 不可逆，不能写：
 
 $$
-A^{-1}=\frac{1}{\det(A)}\operatorname{adj}(A)
+A^{-1}=\frac{1}{\det(A)}\mathrm{adj}(A)
 $$
 
 因为不能除以 0。
@@ -725,16 +725,16 @@ $$
 从公式：
 
 $$
-A\operatorname{adj}(A)=\det(A)I
+A\mathrm{adj}(A)=\det(A)I
 $$
 
 可知，当 $\det(A)=0$ 时：
 
 $$
-A\operatorname{adj}(A)=0
+A\mathrm{adj}(A)=0
 $$
 
-这说明 $\operatorname{adj}(A)$ 的列向量都会被 A 压到零向量。
+这说明 $\mathrm{adj}(A)$ 的列向量都会被 A 压到零向量。
 
 也就是说：
 
@@ -744,9 +744,9 @@ $$
 
 | A 的秩 | 伴随矩阵的情况 | 几何直觉 |
 | --- | --- | --- |
-| $\operatorname{rank}(A)=n$ | $\operatorname{adj}(A)$ 可逆 | A 没有压扁空间，伴随矩阵就是带缩放的逆变换 |
-| $\operatorname{rank}(A)=n-1$ | $\operatorname{adj}(A)$ 通常非零，但秩为 1 | 空间刚好少了一个方向，伴随矩阵记录这条临界的压扁信息 |
-| $\operatorname{rank}(A)\le n-2$ | $\operatorname{adj}(A)=0$ | 空间压扁得太厉害，低一维体积也都消失了 |
+| $\mathrm{rank}(A)=n$ | $\mathrm{adj}(A)$ 可逆 | A 没有压扁空间，伴随矩阵就是带缩放的逆变换 |
+| $\mathrm{rank}(A)=n-1$ | $\mathrm{adj}(A)$ 通常非零，但秩为 1 | 空间刚好少了一个方向，伴随矩阵记录这条临界的压扁信息 |
+| $\mathrm{rank}(A)\le n-2$ | $\mathrm{adj}(A)=0$ | 空间压扁得太厉害，低一维体积也都消失了 |
 
 二维中尤其直观：
 
@@ -758,7 +758,7 @@ $$
 当 A 可逆时：
 
 $$
-\operatorname{adj}(A)^T=\det(A)A^{-T}
+\mathrm{adj}(A)^T=\det(A)A^{-T}
 $$
 
 这个公式在几何上也很重要。
@@ -774,7 +774,7 @@ $$
 如果还要同时保留面积缩放，就会出现：
 
 $$
-\det(A)A^{-T}=\operatorname{adj}(A)^T
+\det(A)A^{-T}=\mathrm{adj}(A)^T
 $$
 
 所以：
@@ -1911,7 +1911,7 @@ $$
 | 行列式 | 面积或体积如何变化？ | det(A) = 0 表示降维、不可逆 |
 | 秩 | 变换后还剩几个独立方向？ | 秩亏对应信息丢失、零空间变大 |
 | 逆矩阵 | 变换能否还原？ | 和行列式非零、满秩、唯一解等价 |
-| 伴随矩阵 | 如何构造一个带行列式缩放的逆变换？ | 满足 $A\operatorname{adj}(A)=\det(A)I$；可逆时给出 $A^{-1}=\operatorname{adj}(A)/\det(A)$ |
+| 伴随矩阵 | 如何构造一个带行列式缩放的逆变换？ | 满足 $A\mathrm{adj}(A)=\det(A)I$；可逆时给出 $A^{-1}=\mathrm{adj}(A)/\det(A)$ |
 | 特征向量 | 哪些方向在变换中保持稳定？ | 是对角化的坐标轴 |
 | 特征值 | 稳定方向被缩放多少？ | 决定长期迭代的增长或衰减 |
 | 对角化 | 如何简化复杂变换？ | 把矩阵变成特征方向上的独立缩放 |
@@ -1971,7 +1971,7 @@ $$
 当 A 可逆时：
 
 $$
-\operatorname{adj}(A)=\det(A)A^{-1}
+\mathrm{adj}(A)=\det(A)A^{-1}
 $$
 
 所以伴随矩阵和逆矩阵方向上相似，但多了一个行列式缩放。
@@ -1985,7 +1985,7 @@ $$
 时，才有：
 
 $$
-\operatorname{adj}(A)=A^{-1}
+\mathrm{adj}(A)=A^{-1}
 $$
 
 ### 25.6 “行列式为 0 时伴随矩阵是不是没有意义？”
@@ -2046,7 +2046,7 @@ $$
 - 行列式为 0 表示空间被压扁，因此方阵不可逆。
 - 秩表示变换后保留下来的独立方向数量。
 - 逆矩阵表示把空间变换还原回来。
-- 伴随矩阵满足 $A\operatorname{adj}(A)=\det(A)I$。
+- 伴随矩阵满足 $A\mathrm{adj}(A)=\det(A)I$。
 - 当 A 可逆时，伴随矩阵就是 $\det(A)$ 倍的逆矩阵。
 - 几何上，伴随矩阵可以理解为“撤销方向变形，但保留面积或体积缩放”的矩阵。
 - 特征向量是在变换中方向不变的非零向量。
