@@ -31,13 +31,17 @@
 
 二维向量通常写成：
 
-$$ \mathbf{v}=\begin{pmatrix}x\\y\end{pmatrix} $$
+$$
+\mathbf{v}=\begin{pmatrix}x\\y\end{pmatrix}
+$$
 
 它可以理解为：从原点出发，沿水平方向走 x，沿竖直方向走 y。
 
 例如：
 
-$$ \mathbf{v}=\begin{pmatrix}3\\2\end{pmatrix} $$
+$$
+\mathbf{v}=\begin{pmatrix}3\\2\end{pmatrix}
+$$
 
 表示向右走 3 个单位，再向上走 2 个单位。
 
@@ -55,11 +59,20 @@ $$ \mathbf{v}=\begin{pmatrix}3\\2\end{pmatrix} $$
 
 如果：
 
-$$ \mathbf{u}=\begin{pmatrix}1\\2\end{pmatrix}, \qquad \mathbf{v}=\begin{pmatrix}3\\1\end{pmatrix} $$
+$$
+\mathbf{u}=\begin{pmatrix}1\\2\end{pmatrix},
+\qquad
+\mathbf{v}=\begin{pmatrix}3\\1\end{pmatrix}
+$$
 
 那么：
 
-$$ \mathbf{u}+\mathbf{v} =\begin{pmatrix}1\\2\end{pmatrix} +\begin{pmatrix}3\\1\end{pmatrix} =\begin{pmatrix}4\\3\end{pmatrix} $$
+$$
+\mathbf{u}+\mathbf{v}
+=\begin{pmatrix}1\\2\end{pmatrix}
++\begin{pmatrix}3\\1\end{pmatrix}
+=\begin{pmatrix}4\\3\end{pmatrix}
+$$
 
 几何上就是：先沿向量 u 走，再沿向量 v 走，起点到终点的箭头就是向量 u+v。
 
@@ -67,7 +80,9 @@ $$ \mathbf{u}+\mathbf{v} =\begin{pmatrix}1\\2\end{pmatrix} +\begin{pmatrix}3\\1\
 
 向量乘以一个数 c，表示对这个向量做缩放：
 
-$$ c\mathbf{v} $$
+$$
+c\mathbf{v}
+$$
 
 | c 的情况 | 几何意义 |
 | --- | --- |
@@ -82,7 +97,9 @@ $$ c\mathbf{v} $$
 
 给定两个向量 u 和 v，表达式
 
-$$ a\mathbf{u}+b\mathbf{v} $$
+$$
+a\mathbf{u}+b\mathbf{v}
+$$
 
 叫做它们的线性组合，其中 a, b 是任意实数。
 
@@ -94,11 +111,15 @@ $$ a\mathbf{u}+b\mathbf{v} $$
 
 所有形如
 
-$$ a\mathbf{u}+b\mathbf{v} $$
+$$
+a\mathbf{u}+b\mathbf{v}
+$$
 
 的向量构成 u, v 的张成空间，记作：
 
-$$ \mathrm{span}(u,v) $$
+$$
+\mathrm{span}(u,v)
+$$
 
 直观理解：
 
@@ -115,7 +136,10 @@ $$ \mathrm{span}(u,v) $$
 
 例如：
 
-$$ \begin{pmatrix}2\\4\end{pmatrix} =2\begin{pmatrix}1\\2\end{pmatrix} $$
+$$
+\begin{pmatrix}2\\4\end{pmatrix}
+=2\begin{pmatrix}1\\2\end{pmatrix}
+$$
 
 这两个向量共线，第二个方向没有提供新的信息。
 
@@ -129,11 +153,18 @@ $$ \begin{pmatrix}2\\4\end{pmatrix} =2\begin{pmatrix}1\\2\end{pmatrix} $$
 
 二维平面中最常用的标准基是：
 
-$$ \mathbf{i}=\begin{pmatrix}1\\0\end{pmatrix}, \qquad \mathbf{j}=\begin{pmatrix}0\\1\end{pmatrix} $$
+$$
+\mathbf{i}=\begin{pmatrix}1\\0\end{pmatrix},
+\qquad
+\mathbf{j}=\begin{pmatrix}0\\1\end{pmatrix}
+$$
 
 任何二维向量都可以写成：
 
-$$ \begin{pmatrix}x\\y\end{pmatrix} =x\mathbf{i}+y\mathbf{j} $$
+$$
+\begin{pmatrix}x\\y\end{pmatrix}
+=x\mathbf{i}+y\mathbf{j}
+$$
 
 这句话的意思不是“向量天然就是两串数字”，而是：
 
@@ -178,15 +209,31 @@ $$ \begin{pmatrix}x\\y\end{pmatrix} =x\mathbf{i}+y\mathbf{j} $$
 
 设：
 
-$$ A= \begin{pmatrix} a & b\\ c & d \end{pmatrix} $$
+$$
+A=
+\begin{pmatrix}
+a & b\\
+c & d
+\end{pmatrix}
+$$
 
 标准基向量为：
 
-$$ \mathbf{i}=\begin{pmatrix}1\\0\end{pmatrix}, \qquad \mathbf{j}=\begin{pmatrix}0\\1\end{pmatrix} $$
+$$
+\mathbf{i}=\begin{pmatrix}1\\0\end{pmatrix},
+\qquad
+\mathbf{j}=\begin{pmatrix}0\\1\end{pmatrix}
+$$
 
 那么：
 
-$$ A\mathbf{i} =\begin{pmatrix}a\\c\end{pmatrix}, \qquad A\mathbf{j} =\begin{pmatrix}b\\d\end{pmatrix} $$
+$$
+A\mathbf{i}
+=\begin{pmatrix}a\\c\end{pmatrix},
+\qquad
+A\mathbf{j}
+=\begin{pmatrix}b\\d\end{pmatrix}
+$$
 
 也就是说：
 
@@ -200,19 +247,34 @@ $$ A\mathbf{i} =\begin{pmatrix}a\\c\end{pmatrix}, \qquad A\mathbf{j} =\begin{pma
 
 任意向量都可以写成：
 
-$$ \mathbf{x}=x\mathbf{i}+y\mathbf{j} $$
+$$
+\mathbf{x}=x\mathbf{i}+y\mathbf{j}
+$$
 
 经过矩阵 A 变换后：
 
-$$ A\mathbf{x} =A(x\mathbf{i}+y\mathbf{j}) =xA\mathbf{i}+yA\mathbf{j} $$
+$$
+A\mathbf{x}
+=A(x\mathbf{i}+y\mathbf{j})
+=xA\mathbf{i}+yA\mathbf{j}
+$$
 
 如果：
 
-$$ A\mathbf{i}=\begin{pmatrix}a\\c\end{pmatrix}, \qquad A\mathbf{j}=\begin{pmatrix}b\\d\end{pmatrix} $$
+$$
+A\mathbf{i}=\begin{pmatrix}a\\c\end{pmatrix},
+\qquad
+A\mathbf{j}=\begin{pmatrix}b\\d\end{pmatrix}
+$$
 
 那么：
 
-$$ A\begin{pmatrix}x\\y\end{pmatrix} =x\begin{pmatrix}a\\c\end{pmatrix} +y\begin{pmatrix}b\\d\end{pmatrix} =\begin{pmatrix}ax+by\\cx+dy\end{pmatrix} $$
+$$
+A\begin{pmatrix}x\\y\end{pmatrix}
+=x\begin{pmatrix}a\\c\end{pmatrix}
++y\begin{pmatrix}b\\d\end{pmatrix}
+=\begin{pmatrix}ax+by\\cx+dy\end{pmatrix}
+$$
 
 这说明矩阵乘向量不是机械代数，而是在问：
 
@@ -237,7 +299,9 @@ $$ A\begin{pmatrix}x\\y\end{pmatrix} =x\begin{pmatrix}a\\c\end{pmatrix} +y\begin
 
 对于向量 x：
 
-$$ AB\mathbf{x} $$
+$$
+AB\mathbf{x}
+$$
 
 计算顺序是从右往左：
 
@@ -246,13 +310,17 @@ $$ AB\mathbf{x} $$
 
 所以：
 
-$$ AB\mathbf{x}=A(B\mathbf{x}) $$
+$$
+AB\mathbf{x}=A(B\mathbf{x})
+$$
 
 ### 6.1 为什么矩阵乘法通常没有交换律
 
 一般来说：
 
-$$ AB\ne BA $$
+$$
+AB\ne BA
+$$
 
 几何直觉是：
 
@@ -264,7 +332,9 @@ $$ AB\ne BA $$
 
 矩阵乘法满足：
 
-$$ (AB)C=A(BC) $$
+$$
+(AB)C=A(BC)
+$$
 
 几何直觉是：
 
@@ -286,11 +356,19 @@ $$ (AB)C=A(BC) $$
 
 对于二维矩阵：
 
-$$ A= \begin{pmatrix} a & b\\ c & d \end{pmatrix} $$
+$$
+A=
+\begin{pmatrix}
+a & b\\
+c & d
+\end{pmatrix}
+$$
 
 它的行列式是：
 
-$$ \det(A)=ad-bc $$
+$$
+\det(A)=ad-bc
+$$
 
 ### 7.1 det(A) 的绝对值表示缩放大小
 
@@ -298,7 +376,9 @@ $$ \det(A)=ad-bc $$
 
 这个平行四边形的面积就是：
 
-$$ \lvert\det(A)\rvert $$
+$$
+\lvert\det(A)\rvert
+$$
 
 | 行列式 | 几何意义 |
 | --- | --- |
@@ -311,7 +391,9 @@ $$ \lvert\det(A)\rvert $$
 
 如果：
 
-$$ \det(A)=0 $$
+$$
+\det(A)=0
+$$
 
 说明空间被压扁了。
 
@@ -321,11 +403,19 @@ $$ \det(A)=0 $$
 
 因此：
 
-$$ \det(A)=0 \quad\Rightarrow\quad A \text{ 不可逆} $$
+$$
+\det(A)=0
+\quad\Rightarrow\quad
+A \text{ 不可逆}
+$$
 
 反过来，如果 A 是方阵：
 
-$$ \det(A)\ne 0 \quad\Rightarrow\quad A \text{ 可逆} $$
+$$
+\det(A)\ne 0
+\quad\Rightarrow\quad
+A \text{ 可逆}
+$$
 
 ---
 
@@ -351,7 +441,11 @@ $$ \det(A)\ne 0 \quad\Rightarrow\quad A \text{ 可逆} $$
 
 对于 n x n 方阵：
 
-$$ \det(A)=0 \quad\Longleftrightarrow\quad \mathrm{rank}(A)\lt n $$
+$$
+\det(A)=0
+\quad\Longleftrightarrow\quad
+\mathrm{rank}(A)\lt n
+$$
 
 几何上就是：行列式为 0，说明体积被压成 0；体积变 0 的原因，是至少有一个独立方向丢失了。
 
@@ -359,7 +453,9 @@ $$ \det(A)=0 \quad\Longleftrightarrow\quad \mathrm{rank}(A)\lt n $$
 
 零空间是所有满足
 
-$$ A\mathbf{x}=\mathbf{0} $$
+$$
+A\mathbf{x}=\mathbf{0}
+$$
 
 的向量集合。
 
@@ -375,7 +471,9 @@ $$ A\mathbf{x}=\mathbf{0} $$
 
 如果 A 可逆，则存在逆矩阵，使得：
 
-$$ AA^{-1}=A^{-1}A=I $$
+$$
+AA^{-1}=A^{-1}A=I
+$$
 
 其中 I 是单位矩阵，表示“不改变空间”。
 
@@ -401,17 +499,23 @@ $$ AA^{-1}=A^{-1}A=I $$
 
 对一个方阵 A，伴随矩阵通常记作：
 
-$$ \mathrm{adj}(A) $$
+$$
+\mathrm{adj}(A)
+$$
 
 这里的“伴随矩阵”指中文线性代数教材中常见的伴随矩阵，也就是英文里的 adjugate matrix 或 classical adjoint，不是复内积空间里的 Hermitian adjoint。
 
 它满足一个非常重要的公式：
 
-$$ A\mathrm{adj}(A)=\mathrm{adj}(A)A=\det(A)I $$
+$$
+A\mathrm{adj}(A)=\mathrm{adj}(A)A=\det(A)I
+$$
 
 如果 A 可逆，也就是 $\det(A)\ne 0$，那么：
 
-$$ A^{-1}=\frac{1}{\det(A)}\mathrm{adj}(A) $$
+$$
+A^{-1}=\frac{1}{\det(A)}\mathrm{adj}(A)
+$$
 
 这也是很多教材里引入伴随矩阵的方式。
 
@@ -423,7 +527,9 @@ $$ A^{-1}=\frac{1}{\det(A)}\mathrm{adj}(A) $$
 
 因为当 A 可逆时：
 
-$$ \mathrm{adj}(A)=\det(A)A^{-1} $$
+$$
+\mathrm{adj}(A)=\det(A)A^{-1}
+$$
 
 所以它可以被拆成两层意思：
 
@@ -438,21 +544,44 @@ $$ \mathrm{adj}(A)=\det(A)A^{-1} $$
 
 设：
 
-$$ A= \begin{pmatrix} a & b\\ c & d \end{pmatrix} $$
+$$
+A=
+\begin{pmatrix}
+a & b\\
+c & d
+\end{pmatrix}
+$$
 
 那么：
 
-$$ \mathrm{adj}(A)= \begin{pmatrix} d & -b\\ -c & a \end{pmatrix} $$
+$$
+\mathrm{adj}(A)=
+\begin{pmatrix}
+d & -b\\
+-c & a
+\end{pmatrix}
+$$
 
 并且：
 
-$$ A\mathrm{adj}(A)= \begin{pmatrix} ad-bc & 0\\ 0 & ad-bc \end{pmatrix} =\det(A)I $$
+$$
+A\mathrm{adj}(A)=
+\begin{pmatrix}
+ad-bc & 0\\
+0 & ad-bc
+\end{pmatrix}
+=\det(A)I
+$$
 
 几何上，A 先把平面网格变形；$\mathrm{adj}(A)$ 再把这个变形“拉回正方形方向”，但拉回来的不是单位正方形，而是面积被乘了 $\det(A)$ 的正方形。
 
 也就是说：
 
-$$ A \xrightarrow{\mathrm{adj}(A)} \det(A)I $$
+$$
+A
+\xrightarrow{\mathrm{adj}(A)}
+\det(A)I
+$$
 
 这个复合变换不再剪切、不再旋转、不再把方向混在一起，只剩一个统一的面积缩放。
 
@@ -464,15 +593,21 @@ $$ A \xrightarrow{\mathrm{adj}(A)} \det(A)I $$
 
 如果：
 
-$$ A\mathrm{adj}(A)=\det(A)I $$
+$$
+A\mathrm{adj}(A)=\det(A)I
+$$
 
 并且 $\det(A)\ne 0$，那么两边除以 $\det(A)$：
 
-$$ A\left(\frac{1}{\det(A)}\mathrm{adj}(A)\right)=I $$
+$$
+A\left(\frac{1}{\det(A)}\mathrm{adj}(A)\right)=I
+$$
 
 所以：
 
-$$ A^{-1}=\frac{1}{\det(A)}\mathrm{adj}(A) $$
+$$
+A^{-1}=\frac{1}{\det(A)}\mathrm{adj}(A)
+$$
 
 几何过程是：
 
@@ -506,23 +641,48 @@ $$ A^{-1}=\frac{1}{\det(A)}\mathrm{adj}(A) $$
 
 设矩阵 A 的三个列向量是：
 
-$$ \mathbf{a},\mathbf{b},\mathbf{c} $$
+$$
+\mathbf{a},\mathbf{b},\mathbf{c}
+$$
 
 也就是：
 
-$$ A= \begin{pmatrix} | & | & |\\ \mathbf{a} & \mathbf{b} & \mathbf{c}\\ | & | & | \end{pmatrix} $$
+$$
+A=
+\begin{pmatrix}
+| & | & |\\
+\mathbf{a} & \mathbf{b} & \mathbf{c}\\
+| & | & |
+\end{pmatrix}
+$$
 
 这三个向量张成一个平行六面体。
 
 它的三个面可以用叉积表示面积向量：
 
-$$ \mathbf{b}\times\mathbf{c}, \qquad \mathbf{c}\times\mathbf{a}, \qquad \mathbf{a}\times\mathbf{b} $$
+$$
+\mathbf{b}\times\mathbf{c},
+\qquad
+\mathbf{c}\times\mathbf{a},
+\qquad
+\mathbf{a}\times\mathbf{b}
+$$
 
 这些向量的方向垂直于对应的面，长度等于对应平行四边形面的面积。
 
 把它们排在一起，可以得到：
 
-$$ \mathrm{adj}(A)^T = \begin{pmatrix} | & | & |\\ \mathbf{b}\times\mathbf{c} & \mathbf{c}\times\mathbf{a} & \mathbf{a}\times\mathbf{b}\\ | & | & | \end{pmatrix} $$
+$$
+\mathrm{adj}(A)^T
+=
+\begin{pmatrix}
+| & | & |\\
+\mathbf{b}\times\mathbf{c} &
+\mathbf{c}\times\mathbf{a} &
+\mathbf{a}\times\mathbf{b}\\
+| & | & |
+\end{pmatrix}
+$$
 
 这说明：
 
@@ -532,7 +692,9 @@ $$ \mathrm{adj}(A)^T = \begin{pmatrix} | & | & |\\ \mathbf{b}\times\mathbf{c} & 
 
 因为：
 
-$$ \mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})=\det(A) $$
+$$
+\mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})=\det(A)
+$$
 
 这就是平行六面体的有向体积。
 
@@ -546,11 +708,15 @@ $$ \mathbf{a}\cdot(\mathbf{b}\times\mathbf{c})=\det(A) $$
 
 如果：
 
-$$ \det(A)=0 $$
+$$
+\det(A)=0
+$$
 
 那么 A 不可逆，不能写：
 
-$$ A^{-1}=\frac{1}{\det(A)}\mathrm{adj}(A) $$
+$$
+A^{-1}=\frac{1}{\det(A)}\mathrm{adj}(A)
+$$
 
 因为不能除以 0。
 
@@ -558,11 +724,15 @@ $$ A^{-1}=\frac{1}{\det(A)}\mathrm{adj}(A) $$
 
 从公式：
 
-$$ A\mathrm{adj}(A)=\det(A)I $$
+$$
+A\mathrm{adj}(A)=\det(A)I
+$$
 
 可知，当 $\det(A)=0$ 时：
 
-$$ A\mathrm{adj}(A)=0 $$
+$$
+A\mathrm{adj}(A)=0
+$$
 
 这说明 $\mathrm{adj}(A)$ 的列向量都会被 A 压到零向量。
 
@@ -587,7 +757,9 @@ $$ A\mathrm{adj}(A)=0 $$
 
 当 A 可逆时：
 
-$$ \mathrm{adj}(A)^T=\det(A)A^{-T} $$
+$$
+\mathrm{adj}(A)^T=\det(A)A^{-T}
+$$
 
 这个公式在几何上也很重要。
 
@@ -595,11 +767,15 @@ $$ \mathrm{adj}(A)^T=\det(A)A^{-T} $$
 
 但“垂直于某个面”的法向量，不是简单乘以 A，而是要乘以：
 
-$$ A^{-T} $$
+$$
+A^{-T}
+$$
 
 如果还要同时保留面积缩放，就会出现：
 
-$$ \det(A)A^{-T}=\mathrm{adj}(A)^T $$
+$$
+\det(A)A^{-T}=\mathrm{adj}(A)^T
+$$
 
 所以：
 
@@ -616,7 +792,13 @@ $$ \det(A)A^{-T}=\mathrm{adj}(A)^T $$
 
 例如：
 
-$$ A= \begin{pmatrix} 2 & 0\\ 0 & 3 \end{pmatrix} $$
+$$
+A=
+\begin{pmatrix}
+2 & 0\\
+0 & 3
+\end{pmatrix}
+$$
 
 它把 x 方向拉长 2 倍，把 y 方向拉长 3 倍。
 
@@ -628,7 +810,13 @@ $$ A= \begin{pmatrix} 2 & 0\\ 0 & 3 \end{pmatrix} $$
 
 例如逆时针旋转角度 theta 的矩阵是：
 
-$$ R_\theta= \begin{pmatrix} \cos\theta & -\sin\theta\\ \sin\theta & \cos\theta \end{pmatrix} $$
+$$
+R_\theta=
+\begin{pmatrix}
+\cos\theta & -\sin\theta\\
+\sin\theta & \cos\theta
+\end{pmatrix}
+$$
 
 旋转通常保留长度、角度和面积。
 
@@ -640,7 +828,13 @@ $$ R_\theta= \begin{pmatrix} \cos\theta & -\sin\theta\\ \sin\theta & \cos\theta 
 
 例如：
 
-$$ S= \begin{pmatrix} 1 & 1\\ 0 & 1 \end{pmatrix} $$
+$$
+S=
+\begin{pmatrix}
+1 & 1\\
+0 & 1
+\end{pmatrix}
+$$
 
 它保持 i 的方向不变，但把 j 往右推了一段。
 
@@ -656,7 +850,9 @@ $$ S= \begin{pmatrix} 1 & 1\\ 0 & 1 \end{pmatrix} $$
 
 如果非零向量 v 满足：
 
-$$ A\mathbf{v}=\lambda\mathbf{v} $$
+$$
+A\mathbf{v}=\lambda\mathbf{v}
+$$
 
 那么：
 
@@ -682,25 +878,35 @@ $$ A\mathbf{v}=\lambda\mathbf{v} $$
 
 从定义出发：
 
-$$ A\mathbf{v}=\lambda\mathbf{v} $$
+$$
+A\mathbf{v}=\lambda\mathbf{v}
+$$
 
 右边可以写成：
 
-$$ \lambda I\mathbf{v} $$
+$$
+\lambda I\mathbf{v}
+$$
 
 所以：
 
-$$ A\mathbf{v}-\lambda I\mathbf{v}=\mathbf{0} $$
+$$
+A\mathbf{v}-\lambda I\mathbf{v}=\mathbf{0}
+$$
 
 也就是：
 
-$$ (A-\lambda I)\mathbf{v}=\mathbf{0} $$
+$$
+(A-\lambda I)\mathbf{v}=\mathbf{0}
+$$
 
 因为特征向量 v 不能是零向量，所以这个方程必须有非零解。
 
 而一个方阵把某个非零向量压到零向量，说明它不可逆，因此：
 
-$$ \det(A-\lambda I)=0 $$
+$$
+\det(A-\lambda I)=0
+$$
 
 这就是求特征值的基本方法。
 
@@ -708,12 +914,16 @@ $$ \det(A-\lambda I)=0 $$
 
 1. 写出特征方程：
 
-$$ \det(A-\lambda I)=0 $$
+$$
+\det(A-\lambda I)=0
+$$
 
 2. 解出特征值 lambda。
 3. 对每个特征值，代回：
 
-$$ (A-\lambda I)\mathbf{v}=\mathbf{0} $$
+$$
+(A-\lambda I)\mathbf{v}=\mathbf{0}
+$$
 
 4. 解出对应的非零向量 v。
 
@@ -723,93 +933,157 @@ $$ (A-\lambda I)\mathbf{v}=\mathbf{0} $$
 
 设：
 
-$$ A= \begin{pmatrix} 1 & 1\\ -2 & 4 \end{pmatrix} $$
+$$
+A=
+\begin{pmatrix}
+1 & 1\\
+-2 & 4
+\end{pmatrix}
+$$
 
 ### 14.1 求特征值
 
 先计算：
 
-$$ A-\lambda I =\begin{pmatrix} 1-\lambda & 1\\ -2 & 4-\lambda \end{pmatrix} $$
+$$
+A-\lambda I
+=\begin{pmatrix}
+1-\lambda & 1\\
+-2 & 4-\lambda
+\end{pmatrix}
+$$
 
 所以：
 
-$$ \det(A-\lambda I) =(1-\lambda)(4-\lambda)-1\cdot(-2) $$
+$$
+\det(A-\lambda I)
+=(1-\lambda)(4-\lambda)-1\cdot(-2)
+$$
 
 化简：
 
-$$ \det(A-\lambda I) =(1-\lambda)(4-\lambda)+2 $$
+$$
+\det(A-\lambda I)
+=(1-\lambda)(4-\lambda)+2
+$$
 
-$$ =\lambda^2-5\lambda+6 $$
+$$
+=\lambda^2-5\lambda+6
+$$
 
 令它等于 0：
 
-$$ \lambda^2-5\lambda+6=0 $$
+$$
+\lambda^2-5\lambda+6=0
+$$
 
-$$ (\lambda-2)(\lambda-3)=0 $$
+$$
+(\lambda-2)(\lambda-3)=0
+$$
 
 所以特征值是：
 
-$$ \lambda_1=2, \qquad \lambda_2=3 $$
+$$
+\lambda_1=2,
+\qquad
+\lambda_2=3
+$$
 
 ### 14.2 求 lambda1 = 2 的特征向量
 
 根据：
 
-$$ (A-2I)\mathbf{v}=\mathbf{0} $$
+$$
+(A-2I)\mathbf{v}=\mathbf{0}
+$$
 
 有：
 
-$$ A-2I= \begin{pmatrix} -1 & 1\\ -2 & 2 \end{pmatrix} $$
+$$
+A-2I=
+\begin{pmatrix}
+-1 & 1\\
+-2 & 2
+\end{pmatrix}
+$$
 
 令：
 
-$$ \mathbf{v}=\begin{pmatrix}x\\y\end{pmatrix} $$
+$$
+\mathbf{v}=\begin{pmatrix}x\\y\end{pmatrix}
+$$
 
 得到：
 
-$$ -x+y=0 $$
+$$
+-x+y=0
+$$
 
 所以：
 
-$$ y=x $$
+$$
+y=x
+$$
 
 可以取一个特征向量：
 
-$$ \mathbf{v}_1= \begin{pmatrix}1\\1\end{pmatrix} $$
+$$
+\mathbf{v}_1=
+\begin{pmatrix}1\\1\end{pmatrix}
+$$
 
 ### 14.3 求 lambda2 = 3 的特征向量
 
 根据：
 
-$$ (A-3I)\mathbf{v}=\mathbf{0} $$
+$$
+(A-3I)\mathbf{v}=\mathbf{0}
+$$
 
 有：
 
-$$ A-3I= \begin{pmatrix} -2 & 1\\ -2 & 1 \end{pmatrix} $$
+$$
+A-3I=
+\begin{pmatrix}
+-2 & 1\\
+-2 & 1
+\end{pmatrix}
+$$
 
 得到：
 
-$$ -2x+y=0 $$
+$$
+-2x+y=0
+$$
 
 所以：
 
-$$ y=2x $$
+$$
+y=2x
+$$
 
 可以取：
 
-$$ \mathbf{v}_2= \begin{pmatrix}1\\2\end{pmatrix} $$
+$$
+\mathbf{v}_2=
+\begin{pmatrix}1\\2\end{pmatrix}
+$$
 
 这说明矩阵 A 有两条稳定方向：
 
 - 特征值 2 对应的特征向量方向是
 
-$$ \begin{pmatrix}1\\1\end{pmatrix} $$
+$$
+\begin{pmatrix}1\\1\end{pmatrix}
+$$
 
   几何意义：这个方向被拉伸 2 倍。
 
 - 特征值 3 对应的特征向量方向是
 
-$$ \begin{pmatrix}1\\2\end{pmatrix} $$
+$$
+\begin{pmatrix}1\\2\end{pmatrix}
+$$
 
   几何意义：这个方向被拉伸 3 倍。
 
@@ -819,7 +1093,9 @@ $$ \begin{pmatrix}1\\2\end{pmatrix} $$
 
 如果矩阵 A 有足够多线性无关的特征向量，就可以对角化：
 
-$$ A=PDP^{-1} $$
+$$
+A=PDP^{-1}
+$$
 
 其中：
 
@@ -831,7 +1107,15 @@ $$ A=PDP^{-1} $$
 
 ### 15.1 对角化的几何过程
 
-$$ \text{普通坐标} \xrightarrow{P^{-1}} \text{特征向量坐标} \xrightarrow{D} \text{沿特征方向缩放} \xrightarrow{P} \text{回到普通坐标} $$
+$$
+\text{普通坐标}
+\xrightarrow{P^{-1}}
+\text{特征向量坐标}
+\xrightarrow{D}
+\text{沿特征方向缩放}
+\xrightarrow{P}
+\text{回到普通坐标}
+$$
 
 直觉是：
 
@@ -841,29 +1125,58 @@ $$ \text{普通坐标} \xrightarrow{P^{-1}} \text{特征向量坐标} \xrightarr
 
 我们已经求得：
 
-$$ \mathbf{v}_1= \begin{pmatrix}1\\1\end{pmatrix}, \qquad \mathbf{v}_2= \begin{pmatrix}1\\2\end{pmatrix} $$
+$$
+\mathbf{v}_1=
+\begin{pmatrix}1\\1\end{pmatrix},
+\qquad
+\mathbf{v}_2=
+\begin{pmatrix}1\\2\end{pmatrix}
+$$
 
 所以：
 
-$$ P= \begin{pmatrix} 1 & 1\\ 1 & 2 \end{pmatrix} $$
+$$
+P=
+\begin{pmatrix}
+1 & 1\\
+1 & 2
+\end{pmatrix}
+$$
 
 对应特征值为 2 和 3，所以：
 
-$$ D= \begin{pmatrix} 2 & 0\\ 0 & 3 \end{pmatrix} $$
+$$
+D=
+\begin{pmatrix}
+2 & 0\\
+0 & 3
+\end{pmatrix}
+$$
 
 于是：
 
-$$ A=PDP^{-1} $$
+$$
+A=PDP^{-1}
+$$
 
 也就是说，矩阵
 
-$$ \begin{pmatrix} 1 & 1\\ -2 & 4 \end{pmatrix} $$
+$$
+\begin{pmatrix}
+1 & 1\\
+-2 & 4
+\end{pmatrix}
+$$
 
 可以理解成：
 
 1. 先换到由下面两个特征向量构成的坐标系：
 
-$$ \begin{pmatrix}1\\1\end{pmatrix}, \qquad \begin{pmatrix}1\\2\end{pmatrix} $$
+$$
+\begin{pmatrix}1\\1\end{pmatrix},
+\qquad
+\begin{pmatrix}1\\2\end{pmatrix}
+$$
 
 2. 在第一条特征方向上放大 2 倍。
 3. 在第二条特征方向上放大 3 倍。
@@ -875,17 +1188,23 @@ $$ \begin{pmatrix}1\\1\end{pmatrix}, \qquad \begin{pmatrix}1\\2\end{pmatrix} $$
 
 前面讲对角化时写过：
 
-$$ A=PDP^{-1} $$
+$$
+A=PDP^{-1}
+$$
 
 这句话也可以反过来看：
 
-$$ D=P^{-1}AP $$
+$$
+D=P^{-1}AP
+$$
 
 也就是说，矩阵 D 和矩阵 A 描述的是同一个线性变换，只不过它们使用的坐标系不同。
 
 更一般地，如果两个矩阵 A 和 B 满足：
 
-$$ B=P^{-1}AP $$
+$$
+B=P^{-1}AP
+$$
 
 其中 P 是可逆矩阵，那么 A 和 B 叫做相似矩阵。
 
@@ -903,25 +1222,41 @@ $$ B=P^{-1}AP $$
 
 那么：
 
-$$ P\mathbf{x}_{new} $$
+$$
+P\mathbf{x}_{new}
+$$
 
 表示把新坐标翻译成旧坐标。
 
 接着用旧坐标系里的矩阵 A 做变换：
 
-$$ A(P\mathbf{x}_{new}) $$
+$$
+A(P\mathbf{x}_{new})
+$$
 
 变换完成后，结果仍然是旧坐标表示。要回到新坐标语言，需要乘以 $P^{-1}$：
 
-$$ P^{-1}A(P\mathbf{x}_{new}) $$
+$$
+P^{-1}A(P\mathbf{x}_{new})
+$$
 
 所以，在新坐标系中，这个变换的矩阵就是：
 
-$$ B=P^{-1}AP $$
+$$
+B=P^{-1}AP
+$$
 
 几何过程可以记成：
 
-$$ \text{新坐标} \xrightarrow{P} \text{旧坐标} \xrightarrow{A} \text{旧坐标下做变换} \xrightarrow{P^{-1}} \text{回到新坐标} $$
+$$
+\text{新坐标}
+\xrightarrow{P}
+\text{旧坐标}
+\xrightarrow{A}
+\text{旧坐标下做变换}
+\xrightarrow{P^{-1}}
+\text{回到新坐标}
+$$
 
 因此：
 
@@ -933,13 +1268,17 @@ $$ \text{新坐标} \xrightarrow{P} \text{旧坐标} \xrightarrow{A} \text{旧�
 
 设 P 的列向量是 A 的特征向量，那么：
 
-$$ AP=PD $$
+$$
+AP=PD
+$$
 
 右边的意思是：每一条特征方向只被自己的特征值缩放。
 
 两边左乘 $P^{-1}$：
 
-$$ P^{-1}AP=D $$
+$$
+P^{-1}AP=D
+$$
 
 这说明：
 
@@ -964,7 +1303,9 @@ $$ P^{-1}AP=D $$
 
 所以：
 
-$$ A \sim B $$
+$$
+A \sim B
+$$
 
 意味着 A 和 B 可能数字完全不同，但它们背后的几何动作是同一个。
 
@@ -972,23 +1313,51 @@ $$ A \sim B $$
 
 继续使用前面的例子：
 
-$$ A= \begin{pmatrix} 1 & 1\\ -2 & 4 \end{pmatrix} $$
+$$
+A=
+\begin{pmatrix}
+1 & 1\\
+-2 & 4
+\end{pmatrix}
+$$
 
 它有两个特征向量：
 
-$$ \mathbf{v}_1= \begin{pmatrix}1\\1\end{pmatrix}, \qquad \mathbf{v}_2= \begin{pmatrix}1\\2\end{pmatrix} $$
+$$
+\mathbf{v}_1=
+\begin{pmatrix}1\\1\end{pmatrix},
+\qquad
+\mathbf{v}_2=
+\begin{pmatrix}1\\2\end{pmatrix}
+$$
 
 对应特征值分别为：
 
-$$ \lambda_1=2, \qquad \lambda_2=3 $$
+$$
+\lambda_1=2,
+\qquad
+\lambda_2=3
+$$
 
 把这两个特征向量作为新基：
 
-$$ P= \begin{pmatrix} 1 & 1\\ 1 & 2 \end{pmatrix} $$
+$$
+P=
+\begin{pmatrix}
+1 & 1\\
+1 & 2
+\end{pmatrix}
+$$
 
 那么：
 
-$$ P^{-1}AP= \begin{pmatrix} 2 & 0\\ 0 & 3 \end{pmatrix} $$
+$$
+P^{-1}AP=
+\begin{pmatrix}
+2 & 0\\
+0 & 3
+\end{pmatrix}
+$$
 
 几何上，这表示：
 
@@ -1015,33 +1384,55 @@ $$ P^{-1}AP= \begin{pmatrix} 2 & 0\\ 0 & 3 \end{pmatrix} $$
 
 如果要计算：
 
-$$ A^{100}\mathbf{p} $$
+$$
+A^{100}\mathbf{p}
+$$
 
 直接理解就是：对向量 p 连续做 100 次 A 变换。
 
 如果 A 可对角化：
 
-$$ A=PDP^{-1} $$
+$$
+A=PDP^{-1}
+$$
 
 那么：
 
-$$ A^{100}=PD^{100}P^{-1} $$
+$$
+A^{100}=PD^{100}P^{-1}
+$$
 
 因为中间的 P 的逆矩阵和 P 会相互抵消：
 
-$$ A^2=(PDP^{-1})(PDP^{-1})=PD^2P^{-1} $$
+$$
+A^2=(PDP^{-1})(PDP^{-1})=PD^2P^{-1}
+$$
 
 类似地：
 
-$$ A^n=PD^nP^{-1} $$
+$$
+A^n=PD^nP^{-1}
+$$
 
 而对角矩阵的幂非常容易算：
 
-$$ D= \begin{pmatrix} \lambda_1 & 0\\ 0 & \lambda_2 \end{pmatrix} $$
+$$
+D=
+\begin{pmatrix}
+\lambda_1 & 0\\
+0 & \lambda_2
+\end{pmatrix}
+$$
 
 则：
 
-$$ D^{100}= \begin{pmatrix} \lambda_1^{100} & 0\\ 0 & \lambda_2^{100} \end{pmatrix} $$
+$$
+D^{100}=
+\begin{pmatrix}
+\lambda_1^{100} & 0\\
+0 & \lambda_2^{100}
+\end{pmatrix}
+$$
 
 这就是为什么对角化适合研究：
 
@@ -1061,7 +1452,9 @@ $$ D^{100}= \begin{pmatrix} \lambda_1^{100} & 0\\ 0 & \lambda_2^{100} \end{pmatr
 
 如果特征向量不够，就不能写成：
 
-$$ A=PDP^{-1} $$
+$$
+A=PDP^{-1}
+$$
 
 例如某些剪切矩阵可能只有一个特征方向，因此不能在实数二维空间里找到足够的特征向量来对角化。
 
@@ -1073,7 +1466,9 @@ $$ A=PDP^{-1} $$
 
 对称矩阵满足：
 
-$$ A^T=A $$
+$$
+A^T=A
+$$
 
 对称矩阵有非常好的性质：
 
@@ -1083,7 +1478,9 @@ $$ A^T=A $$
 
 如果 A 是实对称矩阵，那么可以写成：
 
-$$ A=QDQ^T $$
+$$
+A=QDQ^T
+$$
 
 其中：
 
@@ -1103,17 +1500,32 @@ $$ A=QDQ^T $$
 
 二次型通常写成：
 
-$$ q(\mathbf{x})=\mathbf{x}^TA\mathbf{x} $$
+$$
+q(\mathbf{x})=\mathbf{x}^TA\mathbf{x}
+$$
 
 其中 $\mathbf{x}$ 是向量，A 是矩阵。
 
 如果在二维里：
 
-$$ \mathbf{x}= \begin{pmatrix}x\\y\end{pmatrix}, \qquad A= \begin{pmatrix} a & b\\ b & c \end{pmatrix} $$
+$$
+\mathbf{x}=
+\begin{pmatrix}x\\y\end{pmatrix},
+\qquad
+A=
+\begin{pmatrix}
+a & b\\
+b & c
+\end{pmatrix}
+$$
 
 那么：
 
-$$ \mathbf{x}^TA\mathbf{x} = ax^2+2bxy+cy^2 $$
+$$
+\mathbf{x}^TA\mathbf{x}
+=
+ax^2+2bxy+cy^2
+$$
 
 这就是一个二次型。
 
@@ -1129,11 +1541,15 @@ $$ \mathbf{x}^TA\mathbf{x} = ax^2+2bxy+cy^2 $$
 
 再看：
 
-$$ \mathbf{x}^T(A\mathbf{x}) $$
+$$
+\mathbf{x}^T(A\mathbf{x})
+$$
 
 这其实就是：
 
-$$ \mathbf{x}\cdot(A\mathbf{x}) $$
+$$
+\mathbf{x}\cdot(A\mathbf{x})
+$$
 
 也就是说，二次型在问：
 
@@ -1151,7 +1567,15 @@ $$ \mathbf{x}\cdot(A\mathbf{x}) $$
 
 因为：
 
-$$ \mathbf{x}^TA\mathbf{x} = \mathbf{x}^T \left( \frac{A+A^T}{2} \right) \mathbf{x} $$
+$$
+\mathbf{x}^TA\mathbf{x}
+=
+\mathbf{x}^T
+\left(
+\frac{A+A^T}{2}
+\right)
+\mathbf{x}
+$$
 
 所以研究二次型时，通常直接把矩阵看成对称矩阵。
 
@@ -1163,11 +1587,19 @@ $$ \mathbf{x}^TA\mathbf{x} = \mathbf{x}^T \left( \frac{A+A^T}{2} \right) \mathbf
 
 看这个二次型：
 
-$$ q(x,y)=5x^2+8xy+5y^2 $$
+$$
+q(x,y)=5x^2+8xy+5y^2
+$$
 
 它对应的矩阵是：
 
-$$ A= \begin{pmatrix} 5 & 4\\ 4 & 5 \end{pmatrix} $$
+$$
+A=
+\begin{pmatrix}
+5 & 4\\
+4 & 5
+\end{pmatrix}
+$$
 
 中间的 $8xy$ 叫交叉项。
 
@@ -1177,25 +1609,41 @@ $$ A= \begin{pmatrix} 5 & 4\\ 4 & 5 \end{pmatrix} $$
 
 对称矩阵可以正交对角化：
 
-$$ A=QDQ^T $$
+$$
+A=QDQ^T
+$$
 
 令：
 
-$$ \mathbf{y}=Q^T\mathbf{x} $$
+$$
+\mathbf{y}=Q^T\mathbf{x}
+$$
 
 也就是把坐标轴旋转到特征向量方向上。
 
 那么：
 
-$$ \mathbf{x}^TA\mathbf{x} = \mathbf{y}^TD\mathbf{y} $$
+$$
+\mathbf{x}^TA\mathbf{x}
+=
+\mathbf{y}^TD\mathbf{y}
+$$
 
 如果：
 
-$$ D= \begin{pmatrix} \lambda_1 & 0\\ 0 & \lambda_2 \end{pmatrix} $$
+$$
+D=
+\begin{pmatrix}
+\lambda_1 & 0\\
+0 & \lambda_2
+\end{pmatrix}
+$$
 
 那么：
 
-$$ q=\lambda_1y_1^2+\lambda_2y_2^2 $$
+$$
+q=\lambda_1y_1^2+\lambda_2y_2^2
+$$
 
 交叉项消失了。
 
@@ -1207,19 +1655,35 @@ $$ q=\lambda_1y_1^2+\lambda_2y_2^2 $$
 
 继续看：
 
-$$ A= \begin{pmatrix} 5 & 4\\ 4 & 5 \end{pmatrix} $$
+$$
+A=
+\begin{pmatrix}
+5 & 4\\
+4 & 5
+\end{pmatrix}
+$$
 
 它的两个特征方向是：
 
-$$ \begin{pmatrix}1\\1\end{pmatrix}, \qquad \begin{pmatrix}1\\-1\end{pmatrix} $$
+$$
+\begin{pmatrix}1\\1\end{pmatrix},
+\qquad
+\begin{pmatrix}1\\-1\end{pmatrix}
+$$
 
 对应特征值是：
 
-$$ 9, \qquad 1 $$
+$$
+9,
+\qquad
+1
+$$
 
 所以在特征向量坐标系中：
 
-$$ q=9y_1^2+y_2^2 $$
+$$
+q=9y_1^2+y_2^2
+$$
 
 这句话非常有几何含义：
 
@@ -1234,7 +1698,9 @@ $$ q=9y_1^2+y_2^2 $$
 
 更一般地，对正定二次型：
 
-$$ \mathbf{x}^TA\mathbf{x}=1 $$
+$$
+\mathbf{x}^TA\mathbf{x}=1
+$$
 
 会得到一个椭圆或椭球。
 
@@ -1246,7 +1712,9 @@ $$ \mathbf{x}^TA\mathbf{x}=1 $$
 
 对于实对称矩阵 A，二次型：
 
-$$ q(\mathbf{x})=\mathbf{x}^TA\mathbf{x} $$
+$$
+q(\mathbf{x})=\mathbf{x}^TA\mathbf{x}
+$$
 
 的整体形状可以从特征值看出来。
 
@@ -1268,25 +1736,41 @@ $$ q(\mathbf{x})=\mathbf{x}^TA\mathbf{x} $$
 
 普通的矩阵对角化是：
 
-$$ A=PDP^{-1} $$
+$$
+A=PDP^{-1}
+$$
 
 对称矩阵的正交对角化是：
 
-$$ A=QDQ^T $$
+$$
+A=QDQ^T
+$$
 
 二次型里最自然的是第二种，因为 Q 是正交矩阵，只对应旋转或反射，不会扭曲长度和角度。
 
 把它代入二次型：
 
-$$ \mathbf{x}^TA\mathbf{x} = \mathbf{x}^TQDQ^T\mathbf{x} $$
+$$
+\mathbf{x}^TA\mathbf{x}
+=
+\mathbf{x}^TQDQ^T\mathbf{x}
+$$
 
 令：
 
-$$ \mathbf{y}=Q^T\mathbf{x} $$
+$$
+\mathbf{y}=Q^T\mathbf{x}
+$$
 
 就得到：
 
-$$ \mathbf{x}^TA\mathbf{x} = \mathbf{y}^TD\mathbf{y} = \lambda_1y_1^2+\lambda_2y_2^2+\cdots+\lambda_ny_n^2 $$
+$$
+\mathbf{x}^TA\mathbf{x}
+=
+\mathbf{y}^TD\mathbf{y}
+=
+\lambda_1y_1^2+\lambda_2y_2^2+\cdots+\lambda_ny_n^2
+$$
 
 所以：
 
@@ -1297,19 +1781,29 @@ $$ \mathbf{x}^TA\mathbf{x} = \mathbf{y}^TD\mathbf{y} = \lambda_1y_1^2+\lambda_2y
 
 点积写作：
 
-$$ \mathbf{u}\cdot\mathbf{v} $$
+$$
+\mathbf{u}\cdot\mathbf{v}
+$$
 
 代数上，如果：
 
-$$ \mathbf{u}=\begin{pmatrix}u_1\\u_2\end{pmatrix}, \qquad \mathbf{v}=\begin{pmatrix}v_1\\v_2\end{pmatrix} $$
+$$
+\mathbf{u}=\begin{pmatrix}u_1\\u_2\end{pmatrix},
+\qquad
+\mathbf{v}=\begin{pmatrix}v_1\\v_2\end{pmatrix}
+$$
 
 那么：
 
-$$ \mathbf{u}\cdot\mathbf{v}=u_1v_1+u_2v_2 $$
+$$
+\mathbf{u}\cdot\mathbf{v}=u_1v_1+u_2v_2
+$$
 
 几何上：
 
-$$ \mathbf{u}\cdot\mathbf{v}=\|\mathbf{u}\|\|\mathbf{v}\|\cos\theta $$
+$$
+\mathbf{u}\cdot\mathbf{v}=\|\mathbf{u}\|\|\mathbf{v}\|\cos\theta
+$$
 
 其中 theta 是两个向量的夹角。
 
@@ -1331,7 +1825,9 @@ $$ \mathbf{u}\cdot\mathbf{v}=\|\mathbf{u}\|\|\mathbf{v}\|\cos\theta $$
 
 三维中，叉积写作：
 
-$$ \mathbf{u}\times\mathbf{v} $$
+$$
+\mathbf{u}\times\mathbf{v}
+$$
 
 它得到的结果仍然是一个向量。
 
@@ -1342,7 +1838,10 @@ $$ \mathbf{u}\times\mathbf{v} $$
 
 也就是：
 
-$$ \|\mathbf{u}\times\mathbf{v}\| =\|\mathbf{u}\|\|\mathbf{v}\|\sin\theta $$
+$$
+\|\mathbf{u}\times\mathbf{v}\|
+=\|\mathbf{u}\|\|\mathbf{v}\|\sin\theta
+$$
 
 叉积可以理解为：
 
@@ -1354,7 +1853,9 @@ $$ \|\mathbf{u}\times\mathbf{v}\| =\|\mathbf{u}\|\|\mathbf{v}\|\sin\theta $$
 
 线性方程组常写成：
 
-$$ A\mathbf{x}=\mathbf{b} $$
+$$
+A\mathbf{x}=\mathbf{b}
+$$
 
 不要只把它看作一堆方程。它也可以有几何解释：
 
@@ -1364,7 +1865,9 @@ $$ A\mathbf{x}=\mathbf{b} $$
 
 下面这个方程是否有解：
 
-$$ A\mathbf{x}=\mathbf{b} $$
+$$
+A\mathbf{x}=\mathbf{b}
+$$
 
 取决于 b 是否落在 A 的列空间中。
 
@@ -1383,11 +1886,15 @@ $$ A\mathbf{x}=\mathbf{b} $$
 
 所以：
 
-$$ A\mathbf{x}=\mathbf{b} $$
+$$
+A\mathbf{x}=\mathbf{b}
+$$
 
 可以唯一还原为：
 
-$$ \mathbf{x}=A^{-1}\mathbf{b} $$
+$$
+\mathbf{x}=A^{-1}\mathbf{b}
+$$
 
 ---
 
@@ -1431,13 +1938,17 @@ $$ \mathbf{x}=A^{-1}\mathbf{b} $$
 
 当
 
-$$ \det(A)=0 $$
+$$
+\det(A)=0
+$$
 
 时，A 不可逆，空间被压扁。
 
 对于方程：
 
-$$ A\mathbf{x}=\mathbf{b} $$
+$$
+A\mathbf{x}=\mathbf{b}
+$$
 
 可能无解，也可能有无穷多解，取决于 b 是否在列空间中。
 
@@ -1459,17 +1970,23 @@ $$ A\mathbf{x}=\mathbf{b} $$
 
 当 A 可逆时：
 
-$$ \mathrm{adj}(A)=\det(A)A^{-1} $$
+$$
+\mathrm{adj}(A)=\det(A)A^{-1}
+$$
 
 所以伴随矩阵和逆矩阵方向上相似，但多了一个行列式缩放。
 
 只有在：
 
-$$ \det(A)=1 $$
+$$
+\det(A)=1
+$$
 
 时，才有：
 
-$$ \mathrm{adj}(A)=A^{-1} $$
+$$
+\mathrm{adj}(A)=A^{-1}
+$$
 
 ### 25.6 “行列式为 0 时伴随矩阵是不是没有意义？”
 
