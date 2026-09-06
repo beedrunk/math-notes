@@ -1,41 +1,43 @@
-# Math Diagnostic Test
+# Math Candidate Test
 
-T01: $\lvert A\rvert = 2$。
+每行一个候选写法，请告诉我哪些行显示为"渲染后的公式"，哪些显示为"原文 $...$ 文本"。
 
-T02: $\lvert A\rvert = 2 $。
+a: $k$
 
-T03: $A^{\ast}=\lvert A\rvert A^{-1}$（test）
+b: $|A|$
 
-T04: $|kA|=k^n|A|$（test）
+c: $\lvert A\rvert$
 
-T05: $`\lvert A\rvert`$
+d: $\vert A\vert$
 
-T06: $`|kA|=k^n|A|`$
+e: $\left|A\right|$
 
-T07: $n\ge 2$（test）
+f: $`|A|`$
 
-T08: $k$（test）
+g: $`\lvert A\rvert`$
 
-T09: 混合 $\lvert AB\rvert $ 与 $\lvert A\rvert ^k$ 一行
+h: $\det(A)=0$
 
-T10: $\left|A\right|$（test）
+i: $A^{-1}A$
 
-T11: $\vert A\vert$（test）
+j: $\lvert A\rvert = 2$
 
-T12: $\lvert A\rvert$（test）
+k: $A^{\ast}$
 
-T13: 多段 $a$ 和 $b$ 和 $\lvert c\rvert $ 混合
+l: $$|A|$$
 
-T14: $\lvert A\rvert$、$\lvert B\rvert$
+m: $$\lvert A\rvert$$
 
-T15: $A^T=A^T$（test）
+n: $|A|=|B|$
 
-T16: $$\lvert A\rvert = \lvert B\rvert$$
+o: $\mathrm{rank}(A)=2$
 
-T17: $|A|$（test）
+p: $`\det(A)=0`$
 
-T18: 两段 $|A|$ 和 $B$ 混合
+q: $|A|$、$B$
 
-T19: $`|A|`$（test）
+r: $\vert A\vert$、$\vert B\vert$
 
-T20: $A^{\ast}$（test）
+s: 简单 $k$、$\vert A\vert$ 混合
+
+t: $`\left|A\right|`$
