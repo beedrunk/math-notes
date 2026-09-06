@@ -6,6 +6,8 @@
 
 - `高等数学/`: 高等数学笔记
 - `线性代数/`: 线性代数笔记
+  - `linear-algebra-geometric-intuition.md`: 几何直觉与对角化
+  - `linear-algebra-problem-solving.md`: 做题方法与步骤（按章节：题型、标准步骤、例题、易错点）
 - `概率论/`: 概率论笔记
 - `assets/`: 图片与例图资源
 - `tools/`: 本地同步与链接规范化脚本
